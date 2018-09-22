@@ -40,6 +40,16 @@ public class AppTest
         }
     }
 
+	@Test
+    public void testjenkin()
+    {
+        App.main(null);
+        try {
+            assertEquals("Hello World!" , "Hello World");
+        } catch (AssertionError e) {
+            fail("\"message\" is not \"Hello World!\"");
+        }
+    }
     @After
     public void cleanUpStreams() {
         System.setOut(null);
